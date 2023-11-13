@@ -87,10 +87,10 @@ input[type=submit]:hover {
 }
 .project-container {
   width: 100%;
-  padding: 18px;
+  padding: 15px;
   background-color: #000; /* Dark background color */
   border: 3px solid #00fbff; /* Neon green border */
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
   margin: 30px;
   transition: transform 0.3s, box-shadow 0.3s;
