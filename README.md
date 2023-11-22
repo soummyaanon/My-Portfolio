@@ -4,6 +4,8 @@
 
 Welcome to the repository for my personal portfolio website! This website serves as a showcase of my skills, projects, and experiences. Whether you're a potential employer, collaborator, or just someone curious about my work, I hope you find what you're looking for.
 
+Deployed link:- https://soummyaanon.github.io/BI-t1/
+
 ## Table of Contents
 
 - [Features](#features)
