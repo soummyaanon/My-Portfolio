@@ -1,168 +1,17 @@
-.container {
-  border-radius: 20px;
-  background-color: #dbe9fa;
-  padding: 20px;
-  width: 70%;
-  margin: auto;
-  box-shadow: 0 0 20px rgb(0, 34, 255), 0 0 30px #0ef, 0 0 40px #0ef;
-  margin: 50px 0 0 0;
-}
+/*------------------------------------------------NAV----------------------------------------*/
 
-.max-width{
-  max-width: 1300px;
-  padding: 0 80px;
-  margin: auto;
-  border-radius: 40px;
-}
-#contactme{
-  padding-top: 75px;
-  margin: 22px;
-  font-family: 'Ubuntu',sans-serif;
-}
-
-.contactme-main{
-  color: #01257D;
-  font-size: 2rem;
-  text-align: center;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  margin-bottom: 15px;
-}
-
-input[type=text], select, textarea {
+nav {
+  position: fixed;
+  top: 0;
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical
-}
-
-input[type=submit] {
-  background-color: green;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: rgb(3, 82, 3);
-}
-#projects {
-  padding-top: 100px;
-  margin: 22px;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #000; /* Dark background color */
-  background-size: 100%;
-}
-
-.max-width {
-  max-width: 1300px;
-  padding: 0 80px;
-  margin: auto;
-}
-
-.projects-main {
-  color: goldenrod;
-  font-size: 2rem;
-  text-align: center;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-}
-
-.project-image {
-  width: 20vw;
-  height: 10vw;
-  margin-bottom: 20px;
-}
-
-.project {
-  display: flex;
-  flex: 100%;
-  justify-content: space-around;
-}
-.project-container {
-  width: 100%;
-  padding: 15px;
-  background-color: #000; /* Dark background color */
-  border: 3px solid #00fbff; /* Neon green border */
-  border-radius: 15px;
-  text-align: center;
-  margin: 30px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-container:hover,
-.project-container:focus {
-  box-shadow: 2px 2px 30px #0668a1, 0 0 10px #00ff00; /* Add a glow effect to the border */
-  transform: translateY(-0.75em);
-  background-color: #000; /* Dark background color */
-  border: 3px solid #00ff00; /* Neon green border */
-}
-
-.project1 {
-  color: white; /* Text color */
-  text-decoration: none;
-  font-size: 1.35rem;
-}
-
-.project .project-container a {
-  color: #01257D;
-}
-
-/* Additional styling for Project 2 */
-.project2 {
-  color: white; /* Text color */
-  text-decoration: none;
-  font-size: 1.35rem;
-}
-
-.project-container:hover .project2 {
-  color: #00ff00; /* Change to neon green on hover */
-  animation: border-glow 1s infinite alternate; /* Add the border glow animation */
-}
-
-@keyframes border-glow {
-  to {
-    border-color: #00ff00;
-    box-shadow: 0 0 20px #00ff00;
-  }
-}
-
-
-*{
-  padding: 0;
-  margin: 0;
- font-family: 'Josefin Sans', sans-serif;
- box-sizing: border-box;
-}
-
-.hero {
-  height: 100vh;
-  width: 100%;
-  background-image: url(https://31.media.tumblr.com/4717a813263f471b0def42d70c835ad5/tumblr_mtw0ojDUCQ1ru39xmo1_500.gif);
-  background-size: 50%; 
-  background-position: right; 
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  background-color: #0c0101;
-  border-radius: 50px;
-}
-
-nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 18px;
-  padding-left: 8%;
-  padding-right: 1%;
-  background-color: black;
- 
+  padding: 18px 8% 18px 1%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
 }
+
 .logo{
  color: white;
  font-size: 30 px;
@@ -260,27 +109,90 @@ right: 6px;
 .socialmedia{
   color: white;
 }
+/* ------------------------------Hero Section Styles ----------------------------*/
 
-.about{
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to left, transparent 50%, rgba(0, 255, 255, 0.1) 80%, transparent 100%), url(https://31.media.tumblr.com/4717a813263f471b0def42d70c835ad5/tumblr_mtw0ojDUCQ1ru39xmo1_500.gif) right / 50% no-repeat;
+  margin-right: 10px;
+  background-color: #0c0101;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1; /* Ensure the content is on top of the background */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Double the width for continuous scrolling effect */
+  height: 100%;
+  background: linear-gradient(to left, transparent 0%, rgba(162, 0, 255, 0.138) 80%, transparent 100%);
+  border-radius: 5px;
+  pointer-events: none; /* Ensure the pseudo-element doesn't capture mouse events */
+  z-index: -1; /* Move the pseudo-element behind other content */
+  animation: gradientAnimation 10s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+/*----------------------------------------- About Section-----------------------------------------------------*/
+
+
+.about {
+  position: relative;
   width: 100%;
   padding: 100px 0px;
-  background-color: #191919;
+  overflow: hidden;
 }
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 50%, rgba(255, 0, 0, 0.3) 70%, rgba(0, 255, 0, 0.3) 100%);
+  animation: gradientAnimationAbout 5s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes gradientAnimationAbout {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
 .about img {
-  height: auto;
+  height: 430px;
   width: 430px;
-  border-radius: 20px;
+  border-radius: 50%;
+  object-fit: cover; 
   border: 2px solid transparent;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(132, 0, 255, 0.8), 0 0 20px rgba(111, 0, 255, 0.6), 0 0 30px rgba(0, 34, 255, 0.927);
   animation: glow 2s infinite alternate;
+  margin-right: 80px;
 }
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(111, 0, 255, 0.8), 0 0 20px rgba(0, 132, 255, 0.6), 0 0 30px rgba(255, 0, 217, 0.4);
   }
   100% {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 76, 0.8), 0 0 40px rgba(0, 255, 136, 0.6), 0 0 60px rgba(111, 0, 255, 0.4);
   }
 }
 
@@ -348,15 +260,35 @@ button:hover {
   color: #00ff00; /* Change this to your preferred hover text color */
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.7);
 }
+/*---------------------------My skill---------------------------------------*/
 
-
-
-
-.service{
-  background: #101010;
-  width: 100%; 
-   padding: 100px 0px;
+.service {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
 }
+
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 50%, rgba(255, 0, 0, 0.3) 70%, rgba(0, 255, 0, 0.3) 100%);
+  animation: gradientAnimationService 5s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes gradientAnimationService {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .title h2{
   color: white;
   font-size:75px;
@@ -370,7 +302,7 @@ button:hover {
   align-items: center;
   min-height: 400px;
 }
-/**************skill card******************/
+/**************--------------------skill card*-------------------*****************/
 .card {
   height: 365px;
   width: 335px;
@@ -394,7 +326,7 @@ button:hover {
 }
 
 .pra {
-  color: #fff; /* White text color */
+  color: #fff;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 25px;
@@ -422,7 +354,204 @@ button:hover {
 }
 
 
-/* contactmenu */
+/*--------------------------------------------------project section ---------------------------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.projects {
+  position: relative;
+  padding-top: 100px;
+  margin: 22px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.3;
+  animation: gradientAnimationProjects 5s linear infinite;
+}
+
+@keyframes gradientAnimationProjects {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.projects-main {
+  color: rgb(141, 238, 22);
+  font-size: 2rem;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-container {
+  width: calc(30% - 40px);
+  margin: 20px;
+  padding: 20px;
+  background-color: #000;
+  box-shadow: 2px 2px 10px #0668a1;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.project-container:hover,
+.project-container:focus {
+  box-shadow: 2px 2px 30px #0668a1, 0 0 10px #00ff00;
+  transform: translateY(-0.75em) scale(1.05);
+  background-color: #000;
+  border: 3px solid #00ff00;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #00fbff;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project1, .project2, .project3, .project4 {
+  color: white;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+.project-container a {
+  color: #5805b6;
+}
+
+.project-description {
+  color: rgb(14, 228, 178);
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*----------------------contact me-----------------------*/
+
+.container {
+  border-radius: 20px;
+  background-color: #dbe9fa;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  box-shadow: 0 0 20px rgb(0, 34, 255), 0 0 30px #0ef, 0 0 40px #0ef;
+  margin: 50px 0 0 0;
+}
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+  border-radius: 40px;
+}
+#contactme {
+  padding-top: 90px;
+  margin: 22px;
+  font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(to right, #000000 50%, #1a1a1a 50%); /* Dark gradient effect */
+  color: #ffffff;
+  text-align: center;
+  background-size: 200% 100%; /* Adjust the background size for the gradient effect */
+  animation: gradientAnimationContactMe 5s linear infinite; /* Adjust the duration as needed */
+}
+
+.contactme-main {
+  color: #01257D;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  margin-bottom: 15px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(3, 82, 3);
+}
+/* Add this CSS for the rating system */
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  font-size: 30px;
+  color: #ffa500;
+}
+
+.rating label::before {
+  content: '\2605'; /* Unicode character for a star */
+}
+
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+  color: #80ff00;
+}
 
 .contact-me {
   width: 100%;
@@ -495,73 +624,8 @@ input[type="submit"]:hover {
   padding: 100px 30%;
 }
 
-/*projects */
 
-#projects{
-  padding-top: 100px;
-  margin: 22px;
-  font-family: 'Open Sans', sans-serif;
-  background-color: black;
-  background-size: 100%;
-}
-.max-width{
-  max-width: 1300px;
-  padding: 0 80px;
-  margin: auto;
-}
-.projects-main{
-  color: goldenrod;
-  font-size: 2rem;
-  text-align: center;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-}
-
-.project-image {
-  width: 20vw;
-  height: 10vw;
-  margin-bottom: 20px;
-}
-
-.project{
-  display: flex;
-  flex: 100%;
-  justify-content: space-around;
-}
-
-.project-container{
-  width: 100%;
-  padding: 20px;
-  background-color: #020202;
-  box-shadow: 2px 2px 10px #0668a1;
-  border-radius: 10px;
-  text-align: center;
-  margin: 40px;
-  transition: 0.3s ease;
-}
-
-.project1{
-  color: black;
-  text-decoration: none;
-  font-size: 1.35rem;
-
-}
-.project .project-container a{
-  color: #000000;
-}
-
-.project-container:hover,
-.project-container:focus {
-  box-shadow: 2px 2px 30px #0668a1;
-  transform: translateY(-0.75em);
-}
-#project-description {
-  color: rgb(14, 224, 228); /* Change the text color to black */
-  font-weight: bold; /* Make the text bold */
-font-family: 'Times New Roman', Times, serif;
-}
-
-/* footer */  
+/* ------------------------------------footer---------------------------------------------- */  
 
 footer{
   position:relative;
@@ -631,7 +695,7 @@ body{
  display: flex;
  justify-content: space-between;
  align-items: center;
- z-index: 100;
+ z-index: 100; 
  color: #0ef;
 }
 .logo{
@@ -654,7 +718,8 @@ display: inline-block;
  cursor: default;
  opacity: 0;
  animation: slideTop .5s ease forwards;
- animation-delay: calc(.2s *var(--i));
+ animation-delay: calc(0.2s * var(--i));
+
 }
 .navbar a:hover, 
 .navbar a:active {
@@ -715,10 +780,10 @@ align-items: center;
 width: 40px;
 height: 40px;
 background: transparent;
-border: 2px solid #0ef;
+border: 2px solid rgba(255, 162, 0, 0.413);
 border-radius: 50%;
 font-size: 20px;
-color: #0ef;
+color: rgba(0, 238, 255, 0.265);
 text-decoration: none;
 margin: 30px 15px 30px 0;
 transition: .5s ease ;
@@ -872,77 +937,51 @@ position: relative;
 margin-top: 10px;
 }
 
-/* Footer Styling */
+/* --------------------------------Footer Styling--------------------------------- */
+
+
+
 footer {
-  background-color: rgba(155, 152, 157, 0);
-  color: #0a1f03;
-  padding: 30px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 5px; 
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  font-weight: 700;
-  border-radius: 80px;
-  box-shadow: 0 0 20px #0ef, 0 0 30px #0ef, 0 0 40px #0ef;
 }
 
-
-.copy {
-  font-size: 14px;
-  color: #131414;
+/* Footer Text */
+.portfolio-info {
+  font-size: 2px; 
+  margin-top: auto; 
 }
 
-.bottom-links {
-  display: flex;
-}
-
-.links {
-  margin: 0 20px;
-  color: #d2dcdc;
-}
-
-.links span {
-  display: block;
-  margin-bottom: 10px;
+.portfolio-info span {
   font-weight: bold;
-  color: #f4e7e7;
-}
-
-.links a {
-  display: block;
-  margin-bottom: 5px;
-  color: #161515;
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-.links i {
-  margin-right: 10px;
-  font-size: 24px;
-  opacity: 0;
-  animation: slideTop .5s ease forwards;
-  animation-delay: calc(.2s * var(--i));
 }
 
 /* Social Media Icons */
+.social {
+  display: flex;
+  gap: 10px;
+}
+
 .social a {
   width: 50px;
-  height: 55px;
+  height: 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f9004d;
+  background: #f96800;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 20px; 
   color: white;
   text-decoration: none;
-  margin: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social a:hover {
   background-color: #0ef;
+  transform: scale(1.1);
 }
