@@ -38,5 +38,5 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/soummyaanon/BI-t1
+   git clone https://github.com/soummyaanon/My-Portfolio
 
