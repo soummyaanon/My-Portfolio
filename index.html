@@ -49,66 +49,103 @@
 </section>
 
 
-   <div class="service" id="service">
-    <div class="title">
-        <h2>My Skills</h2>
-    </div>
-    <div class="box">
-        <div class="card">
-            <i class="fa-solid fa-code"></i>
-            <h3>Web Development</h3>
-            <div class="pra">
-                <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be as fast as possible.</p>
-                <p style="text-align: center;"><br><br>
-                    
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-code"></i>
-            <h3>Front-End Development</h3>
-            <div class="pra">
-                <p>I specialize in creating user-friendly and interactive front-end interfaces. I'm proficient in HTML, CSS, JavaScript, and various front-end frameworks like React and Angular.</p>
-                <p style="text-align: center;"><br><br>
-                    
-                </p>
-            </div>
-        </div>
-        
-        
-        <div class="card">
-            <i class="fa-solid fa-server"></i>
-            <h3>Back-End Technologies</h3>
-            <div class="pra">
-                <p>Expertise in back-end development using languages such as Node.js, Python, and Ruby. Proficient in building RESTful APIs and server-side logic for web applications.</p>
-                <p style="text-align: center;"><br><br>
-                    >
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-database"></i>
-            <h3>Database Technologies</h3>
-            <div class="pra">
-                <p>Skilled in working with both relational databases (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB). Proficient in data modeling, database design, and data management.</p>
-                <p style="text-align: center;"><br><br>
-                   
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-code-branch"></i>
-            <h3>Version Control</h3>
-            <div class="pra">
+<div class="service" id="service">
+  <div class="title">
+      <h2>My Skills</h2>
+  </div>
+  <div class="box">
+      <div class="card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Web Development</h3>
+          <div class="pra">
+              <p>I'm a Web Development Specialist, crafting lightning-fast, seamless experiences across all devices.</p>
+              <p style="text-align: center;"><br><br></p>
+              <span class="additional-content" style="display: none;">
+                  <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be as fast as possible.</p>
+              </span>
+              <button class="read-more-btn" onclick="toggleReadMore(this)">
+                  <span>Read More</span>
+              </button>
+          </div>
+      </div>
+
+      <div class="card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Front-End Development</h3>
+          <div class="pra">
+              <p>I'm your Front-End Maestro: Crafting Beautiful, Interactive Experiences.</p>
+              <p style="text-align: center;"><br><br>
+                  
+              </p>
+              <span class="additional-content" style="display: none;">
+                  <p>I specialize in creating user-friendly and interactive front-end interfaces. I'm proficient in HTML, CSS, JavaScript, and various front-end frameworks like React and Angular.</p>
+              </span>
+              <button class="read-more-btn" onclick="toggleReadMore(this)">
+                  <span>Read More</span>
+              </button>
+          </div>
+      </div>
+
+      <div class="card">
+          <i class="fa-solid fa-server"></i>
+          <h3>Back-End Technologies</h3>
+          <div class="pra">
+              <p>Server-Side Sorcerer: Conjuring seamless experiences, one API spell at a time.</p>
+              <p style="text-align: center;"><br><br>
+                  
+              </p>
+              <span class="additional-content" style="display: none;">
+                  <p>Expertise in back-end development using languages such as Node.js, Python, and Ruby. Proficient in building RESTful APIs and server-side logic for web applications</p>
+              </span>
+              <button class="read-more-btn" onclick="toggleReadMore(this)">
+                  <span>Read More</span>
+              </button>
+          </div>
+      </div>
+
+      <div class="card">
+          <i class="fa-solid fa-database"></i>
+          <h3>Database Technologies</h3>
+          <div class="pra">
+              <p>Database Whisperer: Fluent in SQL and NoSQL, I bridge worlds of data</p>
+              <p style="text-align: center;"><br><br>
+                 
+              </p>
+              <span class="additional-content" style="display: none;">
+                  <p>Skilled in working with both relational databases (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB). Proficient in data modeling, database design, and data management.</p>
+              </span>
+              <button class="read-more-btn" onclick="toggleReadMore(this)">
+                  <span>Read More</span>
+              </button>
+          </div>
+      </div>
+
+      <div class="card">
+        <i class="fab fa-git"></i>
+        <h3>GitHub</h3>
+        <div class="pra">
+            <p>Github Alchemist: Code collaboration, from sparks to masterpieces.   </p>
+            <p style="text-align: center;"><br><br>
+            </p>
+            <span class="additional-content" style="display: none;">
                 <p>Experienced in version control systems like Git and platforms such as GitHub. Proficient in collaborative coding, branching, and managing code repositories.</p>
-                <p style="text-align: center;"><br><br>
-                   
-                </p>
-            </div>
+            </span>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">
+                <span>Read More</span>
+            </button>
         </div>
-        <!-- Add more skill cards for your skills here -->
     </div>
+    
+      <!-- Add more skill cards for your skills here -->
+  </div>
 </div>
+
+<script>
+  function toggleReadMore(button) {
+      const additionalContent = button.parentNode.querySelector('.additional-content');
+      additionalContent.style.display = additionalContent.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
 
 
 
