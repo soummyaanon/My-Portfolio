@@ -61,19 +61,24 @@ nav ul li{
   left: 8%;
   transform: translateY(-50%);
 }
-h1{
-  color: white;
-  margin: 20px 0 20px;
+h1 {
+  background: -webkit-linear-gradient(left, #4285F4, #34A853, #FBBC05, #633be98a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 75px;
-
+  margin-bottom: 50px;
 }
 h3{
   color: white;
   font-size: 25px;
   margin-bottom: 50px;
 }
-h4{
-  color: #fcfc;
+h4 {
+  background: -webkit-linear-gradient(left, #4285F4, #34A853, #FBBC05, #EA4335);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   font-size: 20px;
 }
