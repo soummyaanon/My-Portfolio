@@ -182,39 +182,48 @@
   </section>
 
 
-   <section class="contactme" id="contactme">
-    <div class="max-width">
+<section class="contactme" id="contactme">
+      <div class="max-width">
         <h1 class="contactme-main">CONTACT ME</h1>
         <div class="container">
-            <form>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Enter First Name">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Enter Last Name">
-                <label for="email">E-mail</label>
-                <input type="text" id="email" name="email" placeholder="abc@xyz.com">
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something" style="height:150px"></textarea>
+          <form action="/submit-form" method="POST" enctype="application/x-www-form-urlencoded">
+            <!-- Your existing form fields here -->
 
-                <label for="rating">Rate Your Experience:</label>
-                <div class="rating">
-                    <input type="radio" id="star5" name="rating" value="5">
-                    <label for="star5" title="5 stars"></label>
-                    <input type="radio" id="star4" name="rating" value="4">
-                    <label for="star4" title="4 stars"></label>
-                    <input type="radio" id="star3" name="rating" value="3">
-                    <label for="star3" title="3 stars"></label>
-                    <input type="radio" id="star2" name="rating" value="2">
-                    <label for="star2" title="2 stars"></label>
-                    <input type="radio" id="star1" name="rating" value="1">
-                    <label for="star1" title="1 star"></label>
-                </div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter First Name">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter Last Name">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="abc@xyz.com">
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something" style="height:150px"></textarea>
 
-                <input type="submit" value="Submit">
-            </form>
+            <label for="rating">Rate Your Experience:</label>
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5" title="5 stars"></label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4" title="4 stars"></label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3" title="3 stars"></label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2" title="2 stars"></label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1" title="1 star"></label>
+            </div>
+
+            <input type="submit" value="Submit">
+          </form>
         </div>
-    </div>
-   </section>
+      </div>
+    </section>
+
+    <script>
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Submission successful!');
+      });
+    </script>
 
    <footer>
     <div class="welcome-message">
