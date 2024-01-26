@@ -19,8 +19,11 @@ nav {
  cursor: pointer;
 
 }
-span{
-  color: #f9004d;
+span {
+  background: linear-gradient(45deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 nav ul li{
  list-style-type: none ;
