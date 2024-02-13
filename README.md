@@ -1,9 +1,9 @@
 <h1>
 
 ⚠️ **Kindly note:**
-For an enhanced viewing experience of this portfolio, we recommend using a desktop browser. 🖥️ Thank you for your understanding and enjoy exploring!
+For an enhanced viewing experience of this portfolio, I recommend using a desktop browser. 🖥️ Thank you for your understanding and enjoy exploring!
 </h1>
-
+<h2> Wait For My All Device Compatible Portfolio ⌚️⌚️</h2>
 # Personal Portfolio Website
 
 ## Overview
