@@ -1,3 +1,9 @@
+<h1>
+
+⚠️ **Kindly note:**
+For an enhanced viewing experience of this portfolio, we recommend using a desktop browser. 🖥️ Thank you for your understanding and enjoy exploring!
+</h1>
+
 # Personal Portfolio Website
 
 ## Overview
